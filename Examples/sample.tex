@@ -1,0 +1,159 @@
+% Examples/sample.tex
+% A sample LaTeX document that exercises PSLaTeXML features.
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{PSLaTeXML Sample Document}
+\author{Alice Smith \and Bob Jones}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+This document serves as a comprehensive sample for testing the
+PSLaTeXML PowerShell module, which converts \LaTeX{} documents to
+XML or HTML output.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+\LaTeX{} is a high-quality typesetting system.
+It is the standard for academic publications in many fields.
+
+This document demonstrates \textbf{bold text}, \textit{italic text},
+\texttt{monospace text}, and \textsc{small-caps text}.
+We can also use \underline{underlined} text.
+
+The following is a footnote.\footnote{This is the footnote content.}
+Here is a citation~\cite{lamport1994} and a cross-reference to
+Section~\ref{sec:math}.
+
+\section{Mathematics}
+\label{sec:math}
+
+\subsection{Inline and Display Math}
+
+Inline mathematics: $E = mc^2$ and $\int_0^1 x\,dx = \frac{1}{2}$.
+
+Display mathematics:
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+$$
+
+\subsection{Numbered Equations}
+
+\begin{equation}
+\label{eq:euler}
+  e^{i\pi} + 1 = 0
+\end{equation}
+
+\begin{equation*}
+  \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+\end{equation*}
+
+\subsection{Aligned Equations}
+
+\begin{align}
+  a + b &= c \\
+  x     &= y + z
+\end{align}
+
+\section{Lists}
+
+\subsection{Unordered List}
+
+\begin{itemize}
+  \item First item
+  \item Second item with \textbf{bold} text
+  \item Third item with $x^2$ math
+  \begin{itemize}
+    \item Nested item A
+    \item Nested item B
+  \end{itemize}
+\end{itemize}
+
+\subsection{Ordered List}
+
+\begin{enumerate}
+  \item Step one
+  \item Step two
+  \item Step three
+\end{enumerate}
+
+\subsection{Description List}
+
+\begin{description}
+  \item[LaTeXML] A converter from \LaTeX{} to XML/HTML.
+  \item[PSLaTeXML] A PowerShell port of LaTeXML.
+\end{description}
+
+\section{Tables}
+
+\begin{table}[h]
+  \centering
+  \caption{Sample Data Table}
+  \label{tab:data}
+  \begin{tabular}{|l|c|r|}
+    \hline
+    \textbf{Name} & \textbf{Type} & \textbf{Value} \\
+    \hline
+    Alpha   & integer & 1   \\
+    Beta    & float   & 2.5 \\
+    Gamma   & string  & abc \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{Verbatim and Code}
+
+\begin{verbatim}
+function Get-HelloWorld {
+    Write-Output "Hello, World!"
+}
+\end{verbatim}
+
+\section{Block Environments}
+
+\begin{quote}
+This is a block quotation. It can span multiple lines and is typically
+rendered with additional indentation.
+\end{quote}
+
+\begin{abstract}
+A second abstract-style block (for demonstration purposes).
+\end{abstract}
+
+\subsection{Theorems}
+
+\begin{theorem}
+For all $n > 0$, the sum $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$.
+\end{theorem}
+
+\begin{proof}
+By induction on $n$.
+\end{proof}
+
+\section{Hyperlinks}
+
+Visit \url{https://github.com/brucemiller/latexml} for the original Perl
+implementation, and \href{https://github.com/esrklncc793/PSLaTeXML}{PSLaTeXML}
+for the PowerShell port.
+
+\section{Accents and Special Characters}
+
+\begin{itemize}
+  \item Caf\'{e}, na\"{i}ve, r\^{o}le, pi\~{n}ata
+  \item \c{C}a va? --- Oui, \c{c}a va.
+  \item En-dash: 1--10; Em-dash: yes---no
+  \item Opening quotes: ``hello''; Closing: ``world''
+\end{itemize}
+
+\end{document}
